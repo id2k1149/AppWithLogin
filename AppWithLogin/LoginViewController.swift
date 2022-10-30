@@ -12,10 +12,11 @@ class LoginViewController: UIViewController {
     private let userName = "User"
     private let password = "password"
 
-    //MARK: @IBOutlet
+    //MARK: @IBOutlet vars
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    //MARK: override functions
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,8 +32,7 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
-    //MARK: @IBAction
+    //MARK: @IBAction functions
     @IBAction func logInButtonTapped() {
         if userNameTF.text != userName || passwordTF.text != password {
             passwordTF.text = ""
@@ -67,4 +67,3 @@ extension LoginViewController {
         present(alert, animated: true)
     }
 }
-
