@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     
@@ -41,11 +42,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotName() {
-        showAlert(with: "Oops!", and: "Your name is User 😀")
+        showAlert(with: "Oops!", and: "Your name is \(userName) 😀")
     }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password is password 😀")
+        showAlert(with: "Oops!", and: "Your password is \(password) 😀")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
