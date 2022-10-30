@@ -34,13 +34,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotName() {
         showAlert(with: "Oops!", and: "Your name is User 😀")
-        return
     }
-    
     
     @IBAction func forgotPassword() {
         showAlert(with: "Oops!", and: "Your password is password 😀")
-        return
     }
 }
 
