@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
 //        welcomeVC.minValue = minValueLabel.text
            }
 
@@ -31,5 +31,27 @@ class LoginViewController: UIViewController {
 //        }
     }
     
+    
+    @IBAction func forgotName() {
+        showAlert(with: "Oops!", and: "Your name is User 😀")
+        return
+    }
+    
+    
+    @IBAction func forgotPassword() {
+    }
+}
+
+// MARK: UIAlertController
+extension LoginViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
