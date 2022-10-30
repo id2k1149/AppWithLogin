@@ -12,19 +12,21 @@ class LoginViewController: UIViewController {
     private let userName = "User"
     private let password = "password"
 
+    //MARK: @IBOutlet
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTF.text
            }
-
+    
+    
+    //MARK: @IBAction
     @IBAction func logInButtonTapped() {
         if userNameTF.text != userName || passwordTF.text != password {
             passwordTF.text = ""
@@ -40,6 +42,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPassword() {
         showAlert(with: "Oops!", and: "Your password is password 😀")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+//        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
