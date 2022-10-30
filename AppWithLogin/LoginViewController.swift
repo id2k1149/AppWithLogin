@@ -39,6 +39,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgotPassword() {
+        showAlert(with: "Oops!", and: "Your password is password 😀")
+        return
     }
 }
 
