@@ -40,8 +40,7 @@ final class LoginViewController: UIViewController {
     
     //MARK: @IBAction functions
     @IBAction func logInButtonTapped() {
-        if userNameTF.text != users.first?.userName || passwordTF.text != users.first?.password {
-            passwordTF.text = ""
+        if !checkCredentials(login: userNameTF.text!, password: passwordTF.text!) {
             showAlert(with: "Invalid login or password",
                       and: "Please, enter correct login and password")
         }
@@ -50,13 +49,24 @@ final class LoginViewController: UIViewController {
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         // forget buttons need to have tags
         sender.tag == 0
-        ? showAlert(with: "Oops!", and: "Your name is \(users.first?.userName ?? "???") 😉")
-        : showAlert(with: "Oops!", and: "Your password is \(users.first?.password ?? "???") 😉")
+        ? showAlert(with: "Oops!", and: "Try to use \(users.first?.userName ?? "???") 😉")
+        : showAlert(with: "Oops!", and: "Try to use \(users.first?.password ?? "???") 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
+    }
+    
+    func checkCredentials(login: String, password: String) -> Bool {
+        for user in users {
+            if user.userName == login {
+                if user.password == password {
+                    return true
+                }
+            }
+        }
+        return false
     }
 }
 
