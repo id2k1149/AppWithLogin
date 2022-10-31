@@ -3,24 +3,31 @@
 //  AppWithLogin
 //
 //  Created by Max Franz Immelmann on 10/30/22.
+
+//1. Аутлеты
+//2. Публичные свойства
+//3. Приватные свойства
+//4. Переопределенные геттеры
+//5. Инициализаторы
+//6. Методы переопределения род класса
+//7. AB Action методы
+//8. Публичные методы класса
+//9. Приватные методы
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+// final - !!!
+final class LoginViewController: UIViewController {
     
-    private let userName = "User"
-    private let password = "password"
-
     //MARK: @IBOutlet vars
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private let userName = "User"
+    private let password = "password"
+   
     //MARK: override functions
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTF.text
@@ -41,12 +48,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func forgotName() {
-        showAlert(with: "Oops!", and: "Your name is \(userName) 😀")
-    }
-    
-    @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password is \(password) 😀")
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        // forget buttons need to have tags
+        sender.tag == 0
+            ? showAlert(with: "Oops!", and: "Your name is \(userName) 😉")
+            : showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
