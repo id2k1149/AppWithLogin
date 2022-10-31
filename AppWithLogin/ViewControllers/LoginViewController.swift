@@ -49,7 +49,7 @@ final class LoginViewController: UIViewController {
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         // forget buttons need to have tags
         sender.tag == 0
-        ? showAlert(with: "Oops!", and: "Try to use \(users.first?.userName ?? "???") 😉")
+        ? showAlert(with: "Oops!", and: "Try to use \(users.first?.login ?? "???") 😉")
         : showAlert(with: "Oops!", and: "Try to use \(users.first?.password ?? "???") 😉")
     }
     
@@ -60,7 +60,7 @@ final class LoginViewController: UIViewController {
     
     func checkCredentials(login: String, password: String) -> Bool {
         for user in users {
-            if user.userName == login {
+            if user.login == login {
                 if user.password == password {
                     return true
                 }
