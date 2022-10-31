@@ -24,8 +24,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "User"
-    private let password = "password"
+    private let users = User.getUsers()
    
     //MARK: override functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,7 +40,7 @@ final class LoginViewController: UIViewController {
     
     //MARK: @IBAction functions
     @IBAction func logInButtonTapped() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        if userNameTF.text != users.first?.userName || passwordTF.text != users.first?.password {
             passwordTF.text = ""
             showAlert(with: "Invalid login or password",
                       and: "Please, enter correct login and password")
@@ -51,8 +50,8 @@ final class LoginViewController: UIViewController {
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         // forget buttons need to have tags
         sender.tag == 0
-            ? showAlert(with: "Oops!", and: "Your name is \(userName) 😉")
-            : showAlert(with: "Oops!", and: "Your password is \(password) 😉")
+        ? showAlert(with: "Oops!", and: "Your name is \(users.first?.userName ?? "???") 😉")
+        : showAlert(with: "Oops!", and: "Your password is \(users.first?.password ?? "???") 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
