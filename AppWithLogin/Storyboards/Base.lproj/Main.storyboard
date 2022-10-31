@@ -38,7 +38,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Yv-Gc-Sy9"/>
-                                    <segue destination="VPs-oY-ldT" kind="show" id="u28-mQ-CsS"/>
+                                    <segue destination="CjB-Wp-CsH" kind="show" id="u28-mQ-CsS"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cic-hc-dP0">
@@ -86,28 +86,28 @@
             </objects>
             <point key="canvasLocation" x="98" y="-28"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Info-->
         <scene sceneID="orj-iw-7vG">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="VPs-oY-ldT" customClass="WelcomeViewController" customModule="AppWithLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pr9-qJ-z51">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, ...!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12T-3G-9lU">
-                                <rect key="frame" x="60" y="68" width="294" height="36"/>
+                                <rect key="frame" x="60" y="20" width="294" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-Pc-Ozx">
-                                <rect key="frame" x="185.5" y="154" width="43" height="46"/>
+                                <rect key="frame" x="185.5" y="106" width="43" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iog-2A-Xbd">
-                                <rect key="frame" x="158" y="424" width="98" height="48"/>
+                                <rect key="frame" x="158" y="395" width="98" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out">
@@ -119,7 +119,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tUH-mZ-Ivd"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="WmW-Pc-Ozx" firstAttribute="top" secondItem="12T-3G-9lU" secondAttribute="bottom" constant="50" id="0cS-O1-77p"/>
                             <constraint firstItem="WmW-Pc-Ozx" firstAttribute="centerX" secondItem="pr9-qJ-z51" secondAttribute="centerX" id="3U6-vw-XVb"/>
@@ -130,6 +130,7 @@
                             <constraint firstItem="Iog-2A-Xbd" firstAttribute="centerX" secondItem="pr9-qJ-z51" secondAttribute="centerX" id="y2S-VF-leM"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.square.fill" catalog="system" id="acv-88-Ua1"/>
                     <navigationItem key="navigationItem" id="rll-Ut-M2m"/>
                     <connections>
                         <outlet property="userNameLabel" destination="12T-3G-9lU" id="0jU-nE-Oiw"/>
@@ -138,15 +139,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1D-7i-TR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rXX-x0-CPk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="957" y="-28"/>
+            <point key="canvasLocation" x="1866.6666666666667" y="-28.125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="anN-Ti-eLk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CjB-Wp-CsH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Amk-LF-sf8"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mrS-SY-9cS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VPs-oY-ldT" kind="relationship" relationship="viewControllers" id="bmi-xW-TsF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0h-1K-Pwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="-28.125"/>
         </scene>
     </scenes>
     <resources>
+        <image name="info.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
