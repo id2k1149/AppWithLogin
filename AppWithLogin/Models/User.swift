@@ -11,6 +11,7 @@ struct User {
     let password: String
     let firstName: String
     let lastName: String
+    let avatar: String
     let info: String
     let employer: Company
 }
@@ -24,6 +25,7 @@ extension User {
                 password: "pass1",
                 firstName: "Name_1",
                 lastName: "LastName_1",
+                avatar: "image_1",
                 info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 employer: getRandomCompany(companies: Company.getCompanies())
             ),
@@ -33,6 +35,7 @@ extension User {
                 password: "pass2",
                 firstName: "Name_2",
                 lastName: "LastName_2",
+                avatar: "image_2",
                 info: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
                 employer: getRandomCompany(companies: Company.getCompanies())
             ),
@@ -42,6 +45,7 @@ extension User {
                 password: "pass3",
                 firstName: "Name_3",
                 lastName: "LastName_3",
+                avatar: "image_3",
                 info: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 employer: getRandomCompany(companies: Company.getCompanies())
             ),
