@@ -14,6 +14,7 @@
 		50041D51290EBED40033F86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50041D50290EBED40033F86C /* Assets.xcassets */; };
 		50041D54290EBED40033F86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50041D52290EBED40033F86C /* LaunchScreen.storyboard */; };
 		50041D5C290EBFA20033F86C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50041D5B290EBFA20033F86C /* WelcomeViewController.swift */; };
+		5012264029119AEA007E686D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5012263F29119AEA007E686D /* EditViewController.swift */; };
 		50365939291165CE0044A7B4 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365938291165CE0044A7B4 /* MovieViewController.swift */; };
 		50942CA929102AF00083C8C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50942CA829102AF00083C8C5 /* User.swift */; };
 		50942CAB29104AA70083C8C5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50942CAA29104AA70083C8C5 /* Movie.swift */; };
@@ -32,6 +33,7 @@
 		50041D53290EBED40033F86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50041D55290EBED40033F86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50041D5B290EBFA20033F86C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5012263F29119AEA007E686D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		50365938291165CE0044A7B4 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		50942CA829102AF00083C8C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		50942CAA29104AA70083C8C5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				50942CAE2910AB2E0083C8C5 /* UserViewController.swift */,
 				50942CB02910ACE40083C8C5 /* InfoViewController.swift */,
 				50365938291165CE0044A7B4 /* MovieViewController.swift */,
+				5012263F29119AEA007E686D /* EditViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				50942CA929102AF00083C8C5 /* User.swift in Sources */,
 				50041D4A290EBED10033F86C /* SceneDelegate.swift in Sources */,
 				50942CB12910ACE40083C8C5 /* InfoViewController.swift in Sources */,
+				5012264029119AEA007E686D /* EditViewController.swift in Sources */,
 				50942CAB29104AA70083C8C5 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
