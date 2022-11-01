@@ -29,6 +29,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         // add gradient
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
         userNameLabel.text = "Welcome, \(user.firstName)!"
     }
 }
@@ -36,6 +37,7 @@ class WelcomeViewController: UIViewController {
 // MARK: - Set background color
 extension UIView {
     func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
+        
         let gradient = CAGradientLayer()
         gradient.frame = bounds
         gradient.colors = [topColor.cgColor, bottomColor.cgColor]
