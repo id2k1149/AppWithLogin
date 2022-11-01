@@ -25,7 +25,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     private let users = User.getUsers()
-   
+    private var appUser: User!
+    
     //MARK: override functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -35,16 +36,16 @@ final class LoginViewController: UIViewController {
         guard let viewControllers = tabBarVC.viewControllers
         else { return }
         
+        for user in users {
+            if user.login == userNameTF.text {
+                appUser = user
+            }
+        }
+        
         viewControllers.forEach { viewController in
             
             if let welcomeVC = viewController as? WelcomeViewController {
-                
-                for user in users {
-                    if user.login == userNameTF.text {
-                        welcomeVC.user = user
-                    }
-                }
-                
+                welcomeVC.user = appUser
             } else if let userVC = viewController as? UserViewController {
                 for user in users {
                     if user.login == userNameTF.text {
