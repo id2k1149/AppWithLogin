@@ -11,6 +11,7 @@ class InfoViewController: UIViewController {
     
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var userInfoLabel: UILabel!
+    
     var user: User!
 
     override func viewDidLoad() {
@@ -18,5 +19,4 @@ class InfoViewController: UIViewController {
         fullNameLabel.text = "\(user.firstName) \(user.lastName)"
         userInfoLabel.text = user.info
     }
-    
 }

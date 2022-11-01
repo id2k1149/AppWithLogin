@@ -11,6 +11,7 @@ class MovieViewController: UIViewController {
     
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var moviesLabel: UILabel!
+    
     var user: User!
 
     override func viewDidLoad() {
