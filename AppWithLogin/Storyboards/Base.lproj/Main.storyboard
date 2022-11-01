@@ -139,12 +139,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1D-7i-TR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rXX-x0-CPk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="957" y="700"/>
+            <point key="canvasLocation" x="97" y="702"/>
         </scene>
         <!--User-->
         <scene sceneID="MFm-cI-Yb0">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="8uf-9t-jjn" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8uf-9t-jjn" customClass="UserViewController" customModule="AppWithLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fhw-tW-cY0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,25 +155,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-h8-rNb">
+                                <rect key="frame" x="184.5" y="409" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lKO-UD-S6v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UI5-yK-ne0" firstAttribute="leading" secondItem="lKO-UD-S6v" secondAttribute="leading" constant="60" id="C2n-gX-mMX"/>
                             <constraint firstItem="UI5-yK-ne0" firstAttribute="top" secondItem="lKO-UD-S6v" secondAttribute="top" constant="120" id="Ku3-rd-Fho"/>
+                            <constraint firstItem="dL9-h8-rNb" firstAttribute="centerY" secondItem="Fhw-tW-cY0" secondAttribute="centerY" id="ZHP-W2-Wtc"/>
+                            <constraint firstItem="dL9-h8-rNb" firstAttribute="centerX" secondItem="Fhw-tW-cY0" secondAttribute="centerX" id="bzj-n8-A49"/>
                             <constraint firstItem="lKO-UD-S6v" firstAttribute="trailing" secondItem="UI5-yK-ne0" secondAttribute="trailing" constant="60" id="gYg-Mx-7wc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User" image="person" catalog="system" id="OUC-8b-rAc"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="dL9-h8-rNb" id="iI5-mt-kdu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga2-u1-Jqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="701"/>
+            <point key="canvasLocation" x="956.52173913043487" y="701.78571428571422"/>
         </scene>
         <!--Info-->
         <scene sceneID="Idm-e0-Vhd">
             <objects>
-                <viewController id="rBp-z4-JpE" sceneMemberID="viewController">
+                <viewController id="rBp-z4-JpE" customClass="InfoViewController" customModule="AppWithLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IAI-Rp-ZYW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMi-S3-aJd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2436" y="700"/>
+            <point key="canvasLocation" x="1768" y="702"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="anN-Ti-eLk">

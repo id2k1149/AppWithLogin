@@ -45,6 +45,13 @@ final class LoginViewController: UIViewController {
                     }
                 }
                 
+            } else if let userVC = viewController as? UserViewController {
+                for user in users {
+                    if user.login == userNameTF.text {
+                        userVC.user = user
+                    }
+                }
+            
             }
             
         }
