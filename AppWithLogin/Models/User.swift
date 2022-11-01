@@ -22,7 +22,7 @@ extension User {
             User(
                 id: 1,
                 login: "User1",
-                password: "pass1",
+                password: "pass",
                 firstName: "Walter",
                 lastName: "White",
                 photo: "Walter_White",
@@ -32,7 +32,7 @@ extension User {
             User(
                 id: 2,
                 login: "User2",
-                password: "pass2",
+                password: "pass",
                 firstName: "Jesse",
                 lastName: "Pinkman",
                 photo: "Jesse_Pinkman",
@@ -42,7 +42,7 @@ extension User {
             User(
                 id: 3,
                 login: "User3",
-                password: "pass3",
+                password: "pass",
                 firstName: "Mike",
                 lastName: "Ehrmantraut",
                 photo: "Mike_Ehrmantraut",
