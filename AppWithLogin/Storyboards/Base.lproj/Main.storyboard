@@ -155,8 +155,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-h8-rNb">
-                                <rect key="frame" x="20" y="419" width="374" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-h8-rNb">
+                                <rect key="frame" x="20" y="409" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -220,6 +220,49 @@
             </objects>
             <point key="canvasLocation" x="1768" y="702"/>
         </scene>
+        <!--Movies-->
+        <scene sceneID="UYq-yM-VAV">
+            <objects>
+                <viewController id="Z0T-cF-E5o" customClass="MovieViewController" customModule="AppWithLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s02-GV-z85">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="97" translatesAutoresizingMaskIntoConstraints="NO" id="tlJ-Vb-QK9">
+                                <rect key="frame" x="20" y="40" width="374" height="153.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-Pc-rEA">
+                                        <rect key="frame" x="140.5" y="0.0" width="93" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="***" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wa-ed-wbC">
+                                        <rect key="frame" x="175.5" y="133" width="23" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AF5-0J-2EH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tlJ-Vb-QK9" firstAttribute="top" secondItem="AF5-0J-2EH" secondAttribute="top" constant="40" id="DQ1-qk-hzU"/>
+                            <constraint firstItem="tlJ-Vb-QK9" firstAttribute="leading" secondItem="AF5-0J-2EH" secondAttribute="leading" constant="20" id="RQW-P4-GaF"/>
+                            <constraint firstItem="AF5-0J-2EH" firstAttribute="trailing" secondItem="tlJ-Vb-QK9" secondAttribute="trailing" constant="20" id="fWW-rp-74B"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="jeE-Wf-vT0"/>
+                    <connections>
+                        <outlet property="moviesLabel" destination="0wa-ed-wbC" id="CLP-ZI-uZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NuF-Vz-FCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529" y="702"/>
+        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="anN-Ti-eLk">
             <objects>
@@ -235,6 +278,7 @@
                         <segue destination="VPs-oY-ldT" kind="relationship" relationship="viewControllers" id="bmi-xW-TsF"/>
                         <segue destination="8uf-9t-jjn" kind="relationship" relationship="viewControllers" id="MCy-GH-zAI"/>
                         <segue destination="rBp-z4-JpE" kind="relationship" relationship="viewControllers" id="6db-l0-2lC"/>
+                        <segue destination="Z0T-cF-E5o" kind="relationship" relationship="viewControllers" id="mgj-jw-GEe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0h-1K-Pwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -243,6 +287,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film" catalog="system" width="128" height="93"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="info" catalog="system" width="93" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>

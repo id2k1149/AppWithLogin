@@ -50,6 +50,8 @@ final class LoginViewController: UIViewController {
                 userVC.user = appUser
             } else if let infoVC = viewController as? InfoViewController {
                 infoVC.user = appUser
+            } else if let movieVC = viewController as? MovieViewController {
+                movieVC.user = appUser
             }
     
         }
