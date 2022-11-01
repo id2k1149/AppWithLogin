@@ -48,8 +48,10 @@ final class LoginViewController: UIViewController {
                 welcomeVC.user = appUser
             } else if let userVC = viewController as? UserViewController {
                 userVC.user = appUser
+            } else if let infoVC = viewController as? InfoViewController {
+                infoVC.user = appUser
             }
-            
+    
         }
     }
     
