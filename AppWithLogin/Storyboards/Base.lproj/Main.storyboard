@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="98" y="-28"/>
         </scene>
-        <!--Info-->
+        <!--Home-->
         <scene sceneID="orj-iw-7vG">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="VPs-oY-ldT" customClass="WelcomeViewController" customModule="AppWithLogin" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <constraint firstItem="Iog-2A-Xbd" firstAttribute="centerX" secondItem="pr9-qJ-z51" secondAttribute="centerX" id="y2S-VF-leM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="info.square.fill" catalog="system" id="acv-88-Ua1"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="acv-88-Ua1"/>
                     <navigationItem key="navigationItem" id="rll-Ut-M2m"/>
                     <connections>
                         <outlet property="userNameLabel" destination="12T-3G-9lU" id="0jU-nE-Oiw"/>
@@ -139,20 +139,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1D-7i-TR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rXX-x0-CPk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1866.6666666666667" y="-28.125"/>
+            <point key="canvasLocation" x="957" y="700"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="MFm-cI-Yb0">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="8uf-9t-jjn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fhw-tW-cY0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI5-yK-ne0">
+                                <rect key="frame" x="60" y="120" width="294" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lKO-UD-S6v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UI5-yK-ne0" firstAttribute="leading" secondItem="lKO-UD-S6v" secondAttribute="leading" constant="60" id="C2n-gX-mMX"/>
+                            <constraint firstItem="UI5-yK-ne0" firstAttribute="top" secondItem="lKO-UD-S6v" secondAttribute="top" constant="120" id="Ku3-rd-Fho"/>
+                            <constraint firstItem="lKO-UD-S6v" firstAttribute="trailing" secondItem="UI5-yK-ne0" secondAttribute="trailing" constant="60" id="gYg-Mx-7wc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User" image="person" catalog="system" id="OUC-8b-rAc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga2-u1-Jqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="701"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Idm-e0-Vhd">
+            <objects>
+                <viewController id="rBp-z4-JpE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IAI-Rp-ZYW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfI-BC-N3C">
+                                <rect key="frame" x="60" y="120" width="294" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fs7-zl-o1n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BfI-BC-N3C" firstAttribute="top" secondItem="Fs7-zl-o1n" secondAttribute="top" constant="120" id="2k2-pR-mcU"/>
+                            <constraint firstItem="Fs7-zl-o1n" firstAttribute="trailing" secondItem="BfI-BC-N3C" secondAttribute="trailing" constant="60" id="gWC-EW-l9L"/>
+                            <constraint firstItem="BfI-BC-N3C" firstAttribute="leading" secondItem="Fs7-zl-o1n" secondAttribute="leading" constant="60" id="r8Q-kh-auR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="UZb-xY-pSM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMi-S3-aJd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="700"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="anN-Ti-eLk">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CjB-Wp-CsH" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="CjB-Wp-CsH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Amk-LF-sf8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mrS-SY-9cS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="VPs-oY-ldT" kind="relationship" relationship="viewControllers" id="bmi-xW-TsF"/>
+                        <segue destination="8uf-9t-jjn" kind="relationship" relationship="viewControllers" id="MCy-GH-zAI"/>
+                        <segue destination="rBp-z4-JpE" kind="relationship" relationship="viewControllers" id="6db-l0-2lC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0h-1K-Pwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -161,7 +222,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
