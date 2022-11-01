@@ -184,13 +184,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user info" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SK-oA-fI6">
+                                <rect key="frame" x="20" y="216" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fs7-zl-o1n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BfI-BC-N3C" firstAttribute="top" secondItem="Fs7-zl-o1n" secondAttribute="top" constant="120" id="2k2-pR-mcU"/>
+                            <constraint firstItem="Fs7-zl-o1n" firstAttribute="trailing" secondItem="5SK-oA-fI6" secondAttribute="trailing" constant="20" id="CQe-GD-76a"/>
+                            <constraint firstItem="5SK-oA-fI6" firstAttribute="top" secondItem="BfI-BC-N3C" secondAttribute="bottom" constant="60" id="IFJ-Q9-IeI"/>
                             <constraint firstItem="Fs7-zl-o1n" firstAttribute="trailing" secondItem="BfI-BC-N3C" secondAttribute="trailing" constant="60" id="gWC-EW-l9L"/>
                             <constraint firstItem="BfI-BC-N3C" firstAttribute="leading" secondItem="Fs7-zl-o1n" secondAttribute="leading" constant="60" id="r8Q-kh-auR"/>
+                            <constraint firstItem="5SK-oA-fI6" firstAttribute="leading" secondItem="Fs7-zl-o1n" secondAttribute="leading" constant="20" id="ta0-z8-NT6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="info" catalog="system" id="UZb-xY-pSM"/>
@@ -199,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="2436" y="700"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="anN-Ti-eLk">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="CjB-Wp-CsH" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="CjB-Wp-CsH" customClass="TabBarViewController" customModule="AppWithLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Amk-LF-sf8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mrS-SY-9cS">

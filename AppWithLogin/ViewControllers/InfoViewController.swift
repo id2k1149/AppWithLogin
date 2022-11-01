@@ -1,0 +1,18 @@
+//
+//  InfoViewController.swift
+//  AppWithLogin
+//
+//  Created by Max Franz Immelmann on 10/31/22.
+//
+
+import UIKit
+
+class InfoViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+}
