@@ -9,8 +9,8 @@ struct User {
     let id: Int
     let login: String
     let password: String
-    let firstName: String
-    let lastName: String
+    var firstName: String
+    var lastName: String
     let photo: String
     let info: String
     let movies: [Movie]
