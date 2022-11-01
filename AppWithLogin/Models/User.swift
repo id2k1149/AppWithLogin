@@ -33,11 +33,11 @@ extension User {
                 id: 2,
                 login: "User2",
                 password: "pass2",
-                firstName: "Name_2",
-                lastName: "LastName_2",
-                photo: "image_2",
-                info: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                movies: []
+                firstName: "Jesse",
+                lastName: "Pinkman",
+                photo: "Jesse_Pinkman",
+                info: "Jesse Bruce Pinkman was born into a middle-class family in Albuquerque, New Mexico. He has long been estranged from his parents due to his drug addiction and lifestyle as a drug dealer. After being forced to leave his parents' residence, Jesse moved in with his Aunt Ginny, for whom he cared until her death from cancer. Afterward, he was allowed to stay in her home, the ownership of which fell to Jesse's parents.",
+                movies: getMovies(ids: [3, 4])
             ),
             User(
                 id: 3,

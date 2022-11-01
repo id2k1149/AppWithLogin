@@ -23,7 +23,17 @@ extension Movie {
                 id: 2,
                 title: "Godzilla",
                 year: 2014
-            )
+            ),
+            Movie(
+                id: 3,
+                title: "K-PAX",
+                year: 2001
+            ),
+            Movie(
+                id: 4,
+                title: "Mission: Impossible III",
+                year: 2006
+            ),
         ]
     }
 }
