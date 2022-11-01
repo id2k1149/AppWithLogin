@@ -28,9 +28,16 @@ final class LoginViewController: UIViewController {
    
     //MARK: override functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text
-           }
+        guard let tabBarVC = segue.destination as? UITabBarController
+        else { return }
+        guard let viewControllers = tabBarVC.viewControllers
+        else { return }
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = userNameTF.text
+            }
+        }
+    }
     
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,6 +50,7 @@ final class LoginViewController: UIViewController {
         if !checkCredentials(login: userNameTF.text!, password: passwordTF.text!) {
             showAlert(with: "Invalid login or password",
                       and: "Please, enter correct login and password")
+            passwordTF.text = ""
         }
     }
     
