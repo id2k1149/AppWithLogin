@@ -17,7 +17,9 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        nameLabel.text = user.lastName
+        for each in user.movies {
+            nameLabel.text! += "\(each.year) \(each.title) \n"
+        }
     }
 
     

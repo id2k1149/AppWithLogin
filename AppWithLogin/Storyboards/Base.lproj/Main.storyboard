@@ -155,8 +155,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-h8-rNb">
-                                <rect key="frame" x="184.5" y="409" width="45" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-h8-rNb">
+                                <rect key="frame" x="20" y="419" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -167,8 +167,9 @@
                         <constraints>
                             <constraint firstItem="UI5-yK-ne0" firstAttribute="leading" secondItem="lKO-UD-S6v" secondAttribute="leading" constant="60" id="C2n-gX-mMX"/>
                             <constraint firstItem="UI5-yK-ne0" firstAttribute="top" secondItem="lKO-UD-S6v" secondAttribute="top" constant="120" id="Ku3-rd-Fho"/>
+                            <constraint firstItem="dL9-h8-rNb" firstAttribute="leading" secondItem="lKO-UD-S6v" secondAttribute="leading" constant="20" id="Thm-bC-oZc"/>
+                            <constraint firstItem="lKO-UD-S6v" firstAttribute="trailing" secondItem="dL9-h8-rNb" secondAttribute="trailing" constant="20" id="Z0R-Bz-qmo"/>
                             <constraint firstItem="dL9-h8-rNb" firstAttribute="centerY" secondItem="Fhw-tW-cY0" secondAttribute="centerY" id="ZHP-W2-Wtc"/>
-                            <constraint firstItem="dL9-h8-rNb" firstAttribute="centerX" secondItem="Fhw-tW-cY0" secondAttribute="centerX" id="bzj-n8-A49"/>
                             <constraint firstItem="lKO-UD-S6v" firstAttribute="trailing" secondItem="UI5-yK-ne0" secondAttribute="trailing" constant="60" id="gYg-Mx-7wc"/>
                         </constraints>
                     </view>

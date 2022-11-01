@@ -12,17 +12,17 @@ struct Movie {
 }
 
 extension Movie {
-    static func getCompanies() -> [Movie] {
+    static func getMovies() -> [Movie] {
         [
             Movie(
                 id: 1,
-                title: "Company_1",
-                year: 1995
+                title: "Saving Private Ryan",
+                year: 1998
             ),
             Movie(
                 id: 2,
-                title: "Company_2",
-                year: 2001
+                title: "Godzilla",
+                year: 2014
             )
         ]
     }

@@ -23,11 +23,11 @@ extension User {
                 id: 1,
                 login: "User1",
                 password: "pass1",
-                firstName: "Name_1",
-                lastName: "LastName_1",
-                photo: "image_1",
-                info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                movies: []
+                firstName: "Walter",
+                lastName: "White",
+                photo: "Walter_White",
+                info: "Walter was a skilled chemist and co-founder of a technology firm before he accepted a buy-out from his partners. Walt became a high-school chemistry teacher in Albuquerque, and barely making ends meet with his family with wife Skyler (Anna Gunn) and son Walt Jr. (RJ Mitte). At the start of the series, the day after his 50th birthday, Walt is diagnosed with Stage III lung cancer.",
+                movies: getMovies(ids: [1, 2])
             ),
             User(
                 id: 2,
@@ -51,4 +51,15 @@ extension User {
             ),
         ]
     }
+}
+
+let movies = Movie.getMovies()
+func getMovies(ids: [Int]) -> [Movie] {
+    var actorMovies: [Movie] = []
+    for movie in movies {
+        if ids.contains(movie.id) {
+            actorMovies.append(movie)
+        }
+    }
+    return actorMovies
 }
