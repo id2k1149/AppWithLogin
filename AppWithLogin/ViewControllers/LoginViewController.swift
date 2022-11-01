@@ -24,14 +24,39 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "User"
-    private let password = "password"
-   
+    private let users = User.getUsers()
+    private var appUser: User!
+    
     //MARK: override functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text
-           }
+        
+        guard let tabBarVC = segue.destination as? UITabBarController
+        else { return }
+        
+        guard let viewControllers = tabBarVC.viewControllers
+        else { return }
+        
+        for user in users {
+            if user.login == userNameTF.text {
+                appUser = user
+            }
+        }
+        
+        viewControllers.forEach { viewController in
+            
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = appUser
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
+                userVC.user = appUser
+            } else if let infoVC = viewController as? InfoViewController {
+                infoVC.user = appUser
+            } else if let movieVC = viewController as? MovieViewController {
+                movieVC.user = appUser
+            }
+    
+        }
+    }
     
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,23 +66,34 @@ final class LoginViewController: UIViewController {
     
     //MARK: @IBAction functions
     @IBAction func logInButtonTapped() {
-        if userNameTF.text != userName || passwordTF.text != password {
-            passwordTF.text = ""
+        if !checkCredentials(login: userNameTF.text!, password: passwordTF.text!) {
             showAlert(with: "Invalid login or password",
                       and: "Please, enter correct login and password")
+            passwordTF.text = ""
         }
     }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         // forget buttons need to have tags
         sender.tag == 0
-            ? showAlert(with: "Oops!", and: "Your name is \(userName) 😉")
-            : showAlert(with: "Oops!", and: "Your password is \(password) 😉")
+        ? showAlert(with: "Oops!", and: "Try to use \(users.first?.login ?? "???") 😉")
+        : showAlert(with: "Oops!", and: "Try to use \(users.first?.password ?? "???") 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
+    }
+    
+    func checkCredentials(login: String, password: String) -> Bool {
+        for user in users {
+            if user.login == login {
+                if user.password == password {
+                    return true
+                }
+            }
+        }
+        return false
     }
 }
 
