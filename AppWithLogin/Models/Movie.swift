@@ -34,6 +34,16 @@ extension Movie {
                 title: "Mission: Impossible III",
                 year: 2006
             ),
+            Movie(
+                id: 5,
+                title: "Gremlins",
+                year: 1984
+            ),
+            Movie(
+                id: 6,
+                title: "Dark Blue",
+                year: 2002
+            ),
         ]
     }
 }

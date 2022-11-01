@@ -43,11 +43,11 @@ extension User {
                 id: 3,
                 login: "User3",
                 password: "pass3",
-                firstName: "Name_3",
-                lastName: "LastName_3",
-                photo: "image_3",
-                info: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                movies: []
+                firstName: "Mike",
+                lastName: "Ehrmantraut",
+                photo: "Mike_Ehrmantraut",
+                info: "Mike is a Marine Corps veteran of the Vietnam War. He subsequently became an officer on the Philadelphia Police Department. Mike had one son, Matt, who also became a police officer.",
+                movies: getMovies(ids: [5, 6])
             ),
         ]
     }
