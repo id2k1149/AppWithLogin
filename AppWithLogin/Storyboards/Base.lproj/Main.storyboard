@@ -114,7 +114,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rXX-x0-CPk" kind="unwind" unwindAction="unwindFor:" id="zbN-XA-sjv"/>
+                                    <segue destination="rXX-x0-CPk" kind="unwind" unwindAction="unwindFor:" id="miV-HH-kMu"/>
                                 </connections>
                             </button>
                         </subviews>
