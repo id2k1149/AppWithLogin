@@ -46,7 +46,7 @@ class UserViewController: UIViewController {
         editVC.surname = surnameLabel.text
     }
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
+    @IBAction func unwindForSave(for segue: UIStoryboardSegue) {
         guard let editVC = segue.source as? EditViewController else { return }
         nameLabel.text = editVC.nameTF.text
         user.firstName = nameLabel.text ?? user.firstName

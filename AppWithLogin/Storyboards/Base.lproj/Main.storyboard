@@ -114,7 +114,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rXX-x0-CPk" kind="unwind" unwindAction="unwindFor:" id="miV-HH-kMu"/>
+                                    <segue destination="rXX-x0-CPk" kind="unwind" unwindAction="unwindForLogoutFor:" id="Wed-2Q-uMm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -261,7 +261,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Save"/>
                                                 <connections>
-                                                    <segue destination="cC3-Tt-38O" kind="unwind" unwindAction="unwindFor:" id="q01-ip-cWe"/>
+                                                    <segue destination="cC3-Tt-38O" kind="unwind" unwindAction="unwindForSaveFor:" id="N8s-hA-Snk"/>
                                                 </connections>
                                             </button>
                                         </subviews>

@@ -80,7 +80,7 @@ final class LoginViewController: UIViewController {
         : showAlert(with: "Oops!", and: "Try to use \(users.first?.password ?? "???") 😉")
     }
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
+    @IBAction func unwindForLogout(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
     }
