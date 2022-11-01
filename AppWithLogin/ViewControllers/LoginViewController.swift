@@ -47,12 +47,7 @@ final class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = appUser
             } else if let userVC = viewController as? UserViewController {
-                for user in users {
-                    if user.login == userNameTF.text {
-                        userVC.user = user
-                    }
-                }
-            
+                userVC.user = appUser
             }
             
         }
