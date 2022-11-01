@@ -34,7 +34,11 @@ final class LoginViewController: UIViewController {
         else { return }
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = userNameTF.text
+                for user in users {
+                    if user.login == userNameTF.text {
+                        welcomeVC.user = user
+                    }
+                }
             }
         }
     }
